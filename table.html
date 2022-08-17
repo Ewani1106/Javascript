@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css" />
+</head>
+<body>
+    
+    
+    <div class="divtextid">
+        <h2 id="h1text">Multiplication No. : </h2>
+        <span id="num">5</span>
+    </div>
+
+    <div id="grid" class="gridclass">
+
+    </div>
+
+    <br/>
+    <br/>
+    <h1>PRIME NO.</h1>
+    <span id="number">4</span>
+
+</body>
+<script type="text/template" id="template">
+    <div id="{divid}">
+        <h3>Multiplication Table of {number}</h3>
+        <table>
+            <tbody id="{bodyId}">
+                {struct}
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<script src="table.js"></script>
+<script src="primeno.js"></script>
+
+
+<script type="text/javascript">
+    
+    document.getElementById("num").style.paddingLeft = "30px";
+    document.getElementById("num").style.fontSize = "20px";
+</script>
+</html>

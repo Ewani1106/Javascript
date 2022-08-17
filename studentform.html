@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="studentform.css" />
+  </head>
+  <body>
+    <h1 class="studentformtext" id="form">STUDENT FORM</h1>
+    <form class="formclass" id="grid">
+      <label>Name :</label>
+      <input type="text" class="nametext" id="name" />
+      <br />
+      <br />
+      <label>Course :</label>
+      <input type="text" class="coursetext" id="course" />
+      <br />
+      <br />
+      <b><label>MARKS</label></b>
+      <br />
+      <br />
+      <div class="marks-div">
+        <label>Marks1 :</label>
+        <input
+          type="text"
+          max="2"
+          min="1"
+          maxlength="2"
+          class="marks1"
+          id="marks1"
+        />
+        <br />
+        <br />
+        <label>Marks2 :</label>
+        <input type="text" max="2" min="1" class="marks2" id="marks2" />
+        <br />
+        <br />
+        <label>Marks3 :</label>
+        <input type="text" max="2" min="1" class="marks3" id="marks3" />
+      </div>
+      <br />
+      <br />
+      <button type="submit" class="button" id="buttonClick" onclick="createTable()" data-button>SUBMIT</button>
+    </form>
+
+    <!-- <section class="section">
+      <div class="studentgrid">
+        <div id="grid" class="gridclass table-mode"></div>
+      </div>
+    </section> -->
+  </body>
+
+  <script type="text/template" id="template">
+    <div id="{tableid}">
+        <b><h2 class="studenttext"> STUDENT TABLE </h2></b>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Marks1</th>
+                    <th>Marks2</th>
+                    <th>Marks3</th>
+                    <th>Total</th>
+                    <th>Avg</th>
+                    <th>Grade</th>
+                </tr>    
+            </thead>
+            <tbody id="{bodyId}">
+
+            </tbody>
+        </table>
+    </div>
+  </script>
+
+  <script src="studentform.js"></script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jsarrays.js"></script>
+</head>
+
+<body>
+    <div id="arrayData" style="font-size:20px;"></div>
+    <div id="singleData" style="font-size:20px;"></div>
+    <div>
+        <h1>Select Fruits</h1>
+        <select name="fruitData" id="fruitData">
+
+        </select>
+
+    </div>
+    <div>
+        <h1>Array Add</h1>
+        <div>
+            <label>Add Fruit</label>
+            <input type="text" name="add_fruit" id="add_fruit">
+        </div>
+
+        <div>
+            <button onclick="addData('add_fruit','arrayData','fruitData')">Add Fruit</button>
+        </div>
+    </div>
+
+    <div>
+        <h1>Array removal</h1>
+        <div>
+            <label>Remove Fruit(Position)</label>
+            <input type="number" name="remove_fruit" id="remove_fruit" min="1" value="1">
+        </div>
+
+        <div>
+            <button onclick="removeData('remove_fruit','arrayData','fruitData')">Remove Fruit</button>
+        </div>
+    </div>
+
+    <div>
+        <h1>Array Get Fruit</h1>
+        <div>
+            <label>Get Fruit(Position)</label>
+            <input type="number" name="get_fruit" id="get_fruit" min="1" value="1">
+        </div>
+
+        <div>
+            <button onclick="getData('get_fruit','singleData')">Get Fruit</button>
+        </div>
+    </div>
+
+    <div>
+        <h1>Array update Fruit</h1>
+        <div>
+            <label>Update Fruit(Position)</label>
+            <input type="number" name="up_fruit" id="up_fruit" min="1" value="1">
+            <input type="text" name="rp_fruit" id="rp_fruit">
+        </div>
+
+        <div>
+            <button onclick="updateData('up_fruit','rp_fruit','arrayData','fruitData')">Update Fruit</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

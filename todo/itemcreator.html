@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="itemcreator.css" />
+    
+  </head>
+  <body>
+    <h1 class="itemtext">ITEM CREATOR</h1>
+
+    <div class="item-div">
+      <b><label>Item Name</label></b>
+      <input type="text" name="name" required />
+      <br />
+      <br />
+      <b><label>Item Qty.</label></b>
+      <input type="text" name="qty" required />
+      <br />
+      <br />
+      <b><label>Item Price</label></b>
+      <input type="text" name="price" required />
+      <br />
+      <br />
+      <br />
+      <button id="itemSubmit" class="submit active">SUBMIT</button>
+      <button id="itemCheckout" class="checkout active">CHECKOUT</button>
+    </div>
+
+    <div class="table-div table-mode">
+      <div class="centertable">
+    <table>
+      <thead>
+        <tr>
+          <th>ITEM NO.</th>
+          <th>ITEM NAME</th>
+          <th>ITEM QTY</th>
+          <th>ITEM PRICE</th>
+          <th>TOTAL PRICE</th>
+        </tr>
+      </thead>
+      <tbody id="itemBody">
+      </tbody>
+    </table>
+  </div>
+    </div>
+
+    <div class="table-div tablecheckout-mode">
+      <div class="centertable">
+      <table>
+        <thead>
+          <tr>
+            <th>TOTAL</th>
+            <th>TOTAL WITH GST</th>
+          </tr>
+        </thead>
+        <tbody id="itemBodyCheckout">
+        </tbody>
+      </table>
+      </div>
+  </div> 
+  </body>
+  <script src="itemcreator.js"></script>
+
+<script>
+    item.init('name','qty','price','itemSubmit', 'itemCheckout', 'itemBody', 'itemBodyCheckout');
+    item.itemReg();
+    item.itemCheckout();
+</script>
+</html>

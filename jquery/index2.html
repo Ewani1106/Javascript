@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</head>
+<body>
+    
+</body>
+<script>
+    try {
+        function printdata(data){
+            for(let d in data){
+                $('body').append("<h1>" + d + data[d] + "</h1>");
+            }        
+        }
+        function attachListner(){
+            $('h1').click(function(){
+                alert($(this).text());
+            });
+        }
+        let data = [];
+        async function getdata(){
+            data = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json());
+            printdata(data);
+           attachListner();
+            console.log(data);
+        }
+        getdata();
+        // let iddata = 1;
+        // $.ajax({
+        //     url: `https://jsonplaceholder.typicode.com/todos/${iddata}`,
+        //     method:'get'
+        // })
+        // .done(function(result){
+        //     const data = result;
+        //     for(let d in data){
+        //         $('body').append("<h1>" + d + data[d] +"</h1>");
+        //     }            
+        // })
+        // .fail(function(){
+        //     console.log("url not found");
+        // });
+    } catch (error) {
+        console.log("error "+ error);
+    }
+</script>
+</html>

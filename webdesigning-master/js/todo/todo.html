@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .error {
+            outline: none;
+            border: none;
+            border: 2px solid red;
+        }
+        
+        .danger {
+            color: tomato;
+            font-size: 24px;
+        }
+        
+        .success {
+            outline: none;
+            border: none;
+            border: 2px solid green;
+        }
+        
+        .warning {
+            outline: none;
+            border: none;
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container col-50">
+            <h1 class="display-1">
+                Todo App
+            </h1>
+            <div class="app">
+                <form name="todoForm" id="todoForm">
+                    <div class="row">
+                        <label class="label">Enter Todo Item:<span class="danger">*</span></label><span class="danger"></span>
+                        <input type="text" name="addtodo" id="addtodo" error="Add item" class="form-control">
+                    </div>
+                    <div class="row">
+                        <input type="button" name="add" id="add" class="btn" value="Add Todo">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container col-50">
+            <div class="row">
+                <h1 class="display-1">Todo Item</h1>
+                <div class="todo" id="todoitem">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="jsvalid.js"></script>
+<script src="todo.js"></script>
+<script>
+    jsvalidation.formElement = document.todoForm || document.getElementById('todoForm');
+    jsvalidation.formCreator();
+
+    todoApp.todoInput = document.getElementById('addtodo');
+    todoApp.todoButton = document.getElementById('add');
+    todoApp.todoDisplay = document.getElementById('todoitem');x
+    todoApp.todoReg();
+</script>
+
+</html>

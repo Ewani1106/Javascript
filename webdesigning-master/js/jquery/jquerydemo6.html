@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <div>
+                <input type="text" name="user">
+                <span></span>
+            </div>
+
+            <div>
+                <input type="text" name="pass">
+                <span></span>
+            </div>
+
+            <div>
+                <label>Hobby: singing</label>
+                <input type="checkbox" name="hobby" value="singing">
+            </div>
+        </form>
+        <div id="textData">
+
+        </div>
+        <div id="htmlData">
+
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('input[name]').focus(function() {
+            $(this).css({
+                "border": "5px solid orange"
+            });
+        });
+        $('input[name]').blur(function() {
+            var data = $(this).val(); ///get
+            if (data !== "" && data !== null && data !== undefined) {
+                $(this).css({
+                    "border": "5px solid green"
+                });
+                $('#textData').text(data); ///set
+
+                $('#htmlData').html('<b>' + data + '</b>'); ///set
+            } else {
+                $(this).css({
+                    "border": "5px solid red"
+                });
+                $('#textData').text('<b>data is not valid</b>');
+
+                $('#htmlData').html('<b>data is not valid</b>');
+            }
+        });
+
+
+        $('input[type=checkbox]').change(function() {
+            if ($(this).is(":checked")) {
+                $('#textData').text($(this).val());
+
+                $('#htmlData').html('<b>' + $(this).val() + '</b>');
+            } else {
+
+                $('#textData').text('');
+
+                $('#htmlData').html('');
+            }
+        });
+    });
+</script>
+
+</html>

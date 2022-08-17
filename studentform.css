@@ -1,0 +1,41 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.studentformtext {
+text-align: center;
+    padding: 40px;
+}
+
+label {
+    font-size: 20px;
+}
+
+form.formclass {
+    text-align: center;
+    padding: 20px;
+}
+
+button#buttonClick {
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 5%;
+    background-color: cornflowerblue;
+    color: blanchedalmond;
+    border: none;
+}
+
+h2.studenttext {
+    padding-bottom: 30px;
+}
+
+table {
+    width: 65%;
+    margin: 0 auto;
+    padding: 50px;
+    border: solid #d17704;
+    border-radius: 5%;
+    font-size: 20px;
+}

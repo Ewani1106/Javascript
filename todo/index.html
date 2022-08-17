@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="text" name="task" >
+            </td>
+            <td>
+                <button id="todoSave">Save</button>
+                <button id="todoSubmit">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Task
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody id="todoBody">
+
+        </tbody>
+    </table>
+
+    <div class="card-view">
+        <div id="cardBody"></div>
+    </div>
+</body>
+<!-- <script src="todo.js"></script> -->
+<!-- <script src="todoCard.js"></script> -->
+<script src="objtodo.js"></script>
+<script>
+    //Table view
+    todo.init('task','todoSave','todoBody');
+    todo.todoReg();
+
+    // //Card view
+    // todoCard.init('task','todoSubmit','cardBody');
+    // todoCard.todoCardReg();
+</script>
+</html>

@@ -1,0 +1,13 @@
+.divtextid {
+    display: flex;
+    align-items: center;
+}
+
+.gridclass{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+table {
+    padding-left: 50px;
+}

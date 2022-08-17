@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mul.css" />
+  </head>
+  <body>
+    <div class="multiplication">
+      <h4 id="mul" class="multext">Multiplication :</h4>
+      <span id="mulval">5</span>
+    </div>
+
+    <table id="table-multi">
+      <tbody id="multi"></tbody>
+    </table>
+
+    <br />
+    <br />
+
+    <div class="multiplication">
+      <h4 id="mul">Multiplication :</h4>
+      <span id="mulval1">5</span>
+    </div>
+
+    <table id="table-multi1">
+      <tbody id="multi1"></tbody>
+    </table>
+
+    <br />
+    <br />
+
+    <div class="multiplication">
+      <h4 id="mul">Multiplication :</h4>
+      <span id="mulval-mul">5</span>
+    </div>
+
+    <div id="div-mul">
+      <!-- <table id="table-multiplication"> 
+        <tbody id="body-multi[lication"></tbody>
+      </table>-->
+    </div>
+
+    <script id="table" type="text/template">
+      <table id="table-multiplication">
+          <tbody id="body-multilication"></tbody>
+        </table>
+    </script>
+
+    <script type="text/javascript">
+      document.getElementById("mul").style.fontSize = "20px";
+      document.getElementById("mul").style.paddingLeft = "20px";
+
+      document.getElementById("mulval").style.paddingLeft = "20px";
+      // document.getElementById("mulval1").style.paddingLeft = "20px";
+
+      document.getElementById("table-multi").style.paddingLeft = "30px";
+
+      // document.getElementById("table").style.paddingLeft = "50px";
+      document.querySelector(".multext").style.backgroundColor = "lightblue";
+    </script>
+    <script src="multiplication.js"></script>
+  </body>
+</html>

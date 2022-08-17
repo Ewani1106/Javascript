@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="arrayfunction.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .table-mode {
+        display: block;
+      }
+
+      .grid-mode {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image">
+      <img
+        src="	https://www.kgkacademy.com/assets/frontend/elegant/images/bg_courses.jpg"
+        class="page-image"
+      />
+      <b
+        ><h1 class="image-text">
+          <span class="text-span"></span>
+          STUDENT
+        </h1></b
+      >
+    </div>
+
+    <div class="image-button">
+      <div class="icon-div">
+        <a href="#" class="button-table active" data-table>
+          <img src="/table.svg" class="icon1"/>
+        </a>
+        <a href="#" class="button-grid active" data-card>
+          <img src="/grid.svg" class="icon1"/>
+        </a>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="studentgrid">
+        <div id="grid" class="gridclass table-mode"></div>
+        <div class="grid-mode">
+          <div>
+            <b><h2 class="studenttext1">STUDENT CARD</h2></b>
+          </div>
+          <div id="grid1" class="gridclass1"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h2>&copy;</h2>
+      <h3> : @ewanijariwala</h3>
+    </footer>
+  </body>
+
+  <script type="text/template" id="template">
+    <div id="{tableid}">
+        <b><h2 class="studenttext"> STUDENT TABLE </h2></b>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Marks1</th>
+                <th>Marks2</th>
+               <th>Marks3</th>
+                <th>Total</th>
+                <th>Avg</th>
+                <th>Grade</th>
+            </tr>
+            <tbody id="{bodyId}">
+
+            </tbody>
+        </table>
+    </div>
+  </script>
+
+  <script type="text/template" id="template1">
+    <div id="{divid1}">
+        <h3>Name : {name}</h3>
+        <h3>Age : {age}</h3>
+       <b> <div class="marksclass">
+        <p>Marks : </p>
+        <h3 class="markstext">{marks1}</h3>
+        <h3 class="markstext">{marks2}</h3>
+        <h3 class="markstext">{marks3}</h3>
+        </div></b>
+        <h3>Total : {total}</h3>
+        <h3>Avg. : {avg}</h3>
+        <h3>Grade : {grade}</h3>
+    </div>
+  </script>
+
+  <script src="arrayfunction.js"></script>
+</html>

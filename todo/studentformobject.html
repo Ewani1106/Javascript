@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="studentformobject.css"/>
+</head>
+<body>
+    
+<h1>STUDENT FORM</h1>
+<!-- <form id="studentform"> -->
+    <b><label>NAME</label></b>
+    <input type="text" name="name" required>
+        <br/>
+        <br/>
+    <b><label>EMAIL</label></b>
+    <input type="email" name="email" required>
+        <br/>
+        <br/>
+    <b><label>GENDER</label></b>
+    <input type="radio" name="Gender" value="male" checked>Male</input>
+    <input type="radio" name="Gender" value="female">Female</input>
+        <br/>
+        <br/>
+    <b><label>MARKS</label></b>
+    <input type="text" name="marks" class="marks" required>
+    <input type="text" name="marks" class="marks" required>
+    <input type="text" name="marks" class="marks" required>
+        <br/>
+        <br/>
+        <button id="studentSubmit">SUBMIT</button>
+<!-- </form> -->
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                ROLL NO.
+            </th>
+            <th>
+                NAME
+            </th>
+            <th>
+                EMAIL
+            </th>
+            <th>
+                GENDER
+            </th>
+            <th>
+                MARKS1
+            </th>
+            <th>
+                MARKS2
+            </th>
+            <th>
+                MARKS3
+            </th>
+            <th>
+                TOTAL
+            </th>
+            <th>
+                AVERAGE
+            </th>
+            <th>
+                GRADE
+            </th>
+        </tr>
+    </thead>
+    <tbody id="studentBody">
+
+    </tbody>
+</table>
+
+</body>
+<script src="studentformobject.js"></script>
+
+<script>
+    student.init('name','email','Gender','marks','studentSubmit','studentBody');
+    student.studentReg();
+</script>
+</html>

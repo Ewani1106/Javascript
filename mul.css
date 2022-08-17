@@ -1,0 +1,51 @@
+.multiplication {
+  display: flex;
+  align-items: center;
+}
+
+#table-multi {
+  width: 50%;
+}
+
+#table-multi,
+#table-multi td {
+  border: 2px solid cornflowerblue;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#table-multi1 {
+  width: 30%;
+}
+
+#table-multi1 {
+  border: 2px solid #673ab7;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+h4#mul {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+span#mulval1 {
+  padding-left: 20px;
+}
+
+#table-multiplication {
+  width: 30%;
+}
+
+#table-multiplication {
+  border: 2px solid cornflowerblue;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#div-mul {
+  width: 20%;
+  border: 2px solid cornflowerblue;
+  border-collapse: collapse;
+  text-align: center;
+}

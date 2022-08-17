@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="theme.css" />
+    <style>
+      @media only print {
+        .non-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body onclick="">
+    <br />
+    <br />
+    <p id="cal-para" class="calcu-para">
+      <span id="oprand1">20</span>
+      <span id="choice">+</span>
+      <span id="oprand2">12</span>
+      =
+      <span id="ans"></span>
+    </p>
+
+    <h1 class="non-print">
+      Non print This is a static template, there is no bundler or bundling
+      involved!
+    </h1>
+    <h1 id="printobj">
+      Print This is a static template, there is no bundler or bundling involved!
+    </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+        </tr>
+      </thead>
+      <tbody id="creator"></tbody>
+    </table>
+    <ewani id="newel"><ul id="newelid"></ul></ewani>
+  </body>
+  <script type="text/javascript">
+    // internal
+    // window.alert("hello");
+    // window.prompt('enter some data')
+    //
+    // document.write("<h1>Sample</h1>");
+    console.log(document.getElementById("printobj"));
+    document.getElementById("printobj").style.paddingTop = "10px";
+    // custom attribute
+    document.getElementById("printobj").setAttribute("ewani", "name");
+    // fetch value
+    document.getElementById("printobj").getAttribute("ewani");
+    // remove
+    document.getElementById("printobj").removeAttribute("ewani");
+
+    document.getElementById("printobj").innerText = "<h1>Sample</h1>";
+    document.getElementById("printobj").innerHTML = "<h1>Sample</h1>";
+
+    // console.log(document.createElement("ewani"));
+    console.log(document.getElementById("newel"));
+    console.log("An error occurred while loading the content");
+
+    document.getElementById("cal-para").style.backgroundColor = "red";
+    document.getElementById("cal-para").style.fontSize = "20px";
+  </script>
+  <script src="demo1.js"></script>
+  <script src="programs.js"></script>
+  <script src="loops.js"></script>
+  <script src="multiplication.js"></script>
+</html>

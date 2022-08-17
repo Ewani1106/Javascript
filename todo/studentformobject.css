@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+form#studentform {
+    text-align: center;
+}
+
+input.marks {
+    width: 50px;
+    height: 25px;
+}
+
+button#studentSubmit {
+    width: 10%;
+    height: 35px;
+    font-size: 17px;
+}
